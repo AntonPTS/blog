@@ -14,7 +14,7 @@ def register(request):
             new_user = form.save()
             # Выполнение входа и перенаправление на домашнюю страницу.
             login(request, new_user)
-            return redirect('learning_logs:index')
+            return redirect('blogs:index')
     # Вывести пустую или недействительную форму.
     context = {'form': form}
     return render(request, 'registration/register.html', context)
