@@ -47,18 +47,6 @@
 		{% block page_header %}{% endblock page_header %}
 	</div>
 	<div>
-		<p>
-		    <a href="{% url 'blogs:index' %}" class="btn btn-primary">Blog</a> -
-		    <a href="{% url 'blogs:blog_posts' %}" class="btn btn-primary">Blog posts</a>
-		
-		    {% if user.is_authenticated %}
-		        <span class="navbar-text"> Hello, {{ user.username }}.</span>
-		        <a href="{% url 'users:logout' %}" class="btn btn-secondary">Log out</a>
-		    {% else %}
-		        <a href="{% url 'users:register' %}" class="btn btn-secondary">Register</a> -
-		        <a href="{% url 'users:login' %}" class="btn btn-secondary">Log in</a>
-		    {% endif %}
-		</p>
 		{% block content %}{% endblock content %}
 	</div>
 </main>
